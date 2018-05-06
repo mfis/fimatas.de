@@ -1,0 +1,6 @@
+{{ partial "head.html" . }}<body><div class="wrap"><div class="section" id="title">{{ .Title }}</div><div class="section" id="content">{{ .Content }}</div>{{ if .Site.Params.mainMenu }}<div class="section bottom-menu"><hr/><p><a href="{{.Site.BaseURL}}">{{ .Site.Params.homepage }}</a>&nbsp;&#183; 
+{{ range first 1 .Site.Params.mainMenu }}<a href="{{ .link }}">{{ .text }}</a>{{ end }}
+{{ range after 1 .Site.Params.mainMenu }}
+&#183; <a href="{{ .link }}">{{ .text }}</a>{{ end }}</p></div><div class="section bottom-menu-small"><p>{{ range first 1 .Site.Params.subMenu }}<a href="{{ .link }}">{{ .text }}</a>{{ end }}
+{{ range after 1 .Site.Params.subMenu }}
+&#183; <a href="{{ .link }}">{{ .text }}</a>{{ end }} </p></div>{{ end }}<div class="section footer">{{ partial "footer.html" . }}</div></div></body>

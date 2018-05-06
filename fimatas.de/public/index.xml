@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fimatas.de</title>
+    <link>https://fimatas.de/</link>
+    <description>Recent content on fimatas.de</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <lastBuildDate>Sun, 29 Apr 2018 09:15:47 +0200</lastBuildDate>
+    
+	<atom:link href="https://fimatas.de/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Impressum und Datenschutzerklärung</title>
+      <link>https://fimatas.de/impressum/</link>
+      <pubDate>Sun, 29 Apr 2018 09:15:47 +0200</pubDate>
+      
+      <guid>https://fimatas.de/impressum/</guid>
+      <description>Impressum Angaben gemäß § 5 TMG:
+Matthias Fischer
+Koxhof 3 d
+42489 Wülfrath
+E-Mail: contact -at- fimatas.de
+Quelle: http://www.e-recht24.de
+Haftungsausschluss (Disclaimer) Haftung für Inhalte Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</description>
+    </item>
+    
+    <item>
+      <title>Web-Apps</title>
+      <link>https://fimatas.de/webapps/</link>
+      <pubDate>Tue, 13 Feb 2018 13:42:49 -0500</pubDate>
+      
+      <guid>https://fimatas.de/webapps/</guid>
+      <description>FileJuggler Eine Cloud-basierte Dateiverwaltung. Unterstützt einfaches, kolaboratives Editieren von Text. Code auf GitHub
+PhotoExpo Bilder- und Video-Gallerie. Mehrbenutzer-Rechteverwaltung. Server-Code auf GitHub, Client-Code auf GitHub</description>
+    </item>
+    
+    <item>
+      <title>Matthias Fischer</title>
+      <link>https://fimatas.de/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fimatas.de/about/</guid>
+      <description>Hello, I&amp;rsquo;m Matthias. I&amp;rsquo;m a theme for Hugo. I&amp;rsquo;m an extremely customizable, content-focused theme that lets you showcase your work your way.
+I have slick minimalist templates for list pages (such as a list of blog posts) and single pages (a page to read one blog post). You can use tags on your content, and view content by tags.
+I also have a simple responsive gallery built with CSS grid. It&amp;rsquo;ll look great on any screen, and all you have to do is provide a folder of images.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+baseurl                 = "https://fimatas.de/"               # Your domain name. Must end with "/"
+languageCode            = "de-de"
+title                   = "fimatas.de"
+theme                   = "sam"
+
+[params]
+    dateform            = "02.01.2006"
+    dateformfull        = "02.01.2006 15:04"
+    favicon             = ""
+    pygmentsStyle       = "monokai"                     # https://help.farbox.com/pygments.html
+    pygmentsCodefences  = true
+    homepage            = "Navigation"                  # What to call the home page link
+    galleryFolder       = "images/"                     # Where you've put your images, after "/content/gallery/"
+    clickablePhotos     = true                          # Allow links to the full size images
+    footerText          = ""
+
+# Metadata
+    description         = "Matthias Fischer"            # Max 160 characters show in search results
+    twitterCard         = "summary"                     # Card value “summary”, “summary_large_image”, “app”, or “player”
+    primaryImage        = ""                            # Image that shows on Twitter cards and OpenGraph links
+
+[[params.mainMenu]]
+    link = "/about"
+    text = "Matthias Fischer"
+
+[[params.mainMenu]]
+    link = "/blog"
+    text = "Blog"
+
+[[params.mainMenu]]
+    link = "/webapps"
+    text = "Web-Apps"
+    
+[[params.subMenu]]
+    link = "/impressum"
+    text = "Impressum & Datenschutzerklärung"
+    
+[[params.subMenu]]
+    link = "/licenseattribution"
+    text = "License-Attribution"

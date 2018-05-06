@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <!-- Character max 160-->
+    <meta name="description" content="{{.Site.Params.description | default "Call me Sam, a theme for Hugo."}}">
+    <!-- Min 120x120px-->
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="{{.Site.BaseURL}}">
+    <meta name="og:image" itemprop="image primaryImageOfPage" content="{{.Site.Params.primaryImage | default "tn.png" | absURL}}">
+    <!-- Characters max 60-->
+    <title>{{.Site.Title}}</title>
+    <link rel="shortcut icon" href="{{.Site.Params.favicon | default "sam.ico" | absURL }}" id="favicon">
+    <link rel="stylesheet" href="{{ "css/style.css" | absURL}}">
+    <!-- jQuery-->
+    <script src="../jquery-3.3.1.min.js"></script>
+
+</head>
+
+</html>

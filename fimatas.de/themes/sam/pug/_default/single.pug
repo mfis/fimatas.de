@@ -1,0 +1,33 @@
+| {{ partial "head.html" . }}
+
+body
+    .wrap
+        .section#title
+            | {{ .Title }}
+        .section#content
+            | {{ .Content }}
+        | {{ if .Site.Params.mainMenu }}
+        .section.bottom-menu
+            hr
+            p
+                a(href='{{.Site.BaseURL}}') {{ .Site.Params.homepage }}
+                | &nbsp;&#183; 
+                | {{ range first 1 .Site.Params.mainMenu }}
+                a(href='{{ .link }}') {{ .text }}
+                | {{ end }}
+                | {{ range after 1 .Site.Params.mainMenu }}
+                | &#183; 
+                a(href='{{ .link }}') {{ .text }}
+                | {{ end }}
+        .section.bottom-menu-small
+            p
+                | {{ range first 1 .Site.Params.subMenu }}
+                a(href='{{ .link }}') {{ .text }}
+                | {{ end }}
+                | {{ range after 1 .Site.Params.subMenu }}
+                | &#183; 
+                a(href='{{ .link }}') {{ .text }}
+                | {{ end }} 
+        | {{ end }}
+        .section.footer
+            | {{ partial "footer.html" . }}
