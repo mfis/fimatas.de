@@ -2,6 +2,7 @@
 title: "Impressum und Datenschutzerklärung"
 date: 2018-04-29T09:15:47+02:00
 ---
+Bei fimatas.de handelt es sich um eine rein privat betriebene Webseite.
 
 ## Impressum
 Angaben gemäß § 5 TMG:  
