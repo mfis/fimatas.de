@@ -47,6 +47,8 @@ Zur Umsetzung der Empfehlungen hinsichtlich des zweiten Backup-Zieles sowie des 
 Damit bin ich bei zwei Backup-Lokationen außerhalb des zu sichernden Geräts, auf die mittels Arq automatisiert versionierte Backups gespeichert werden. Was fehlt, ist der vierte Punkt der o.g. Aufzählung: Die zweite Backup-Software. Diesen Punkt setze ich nur mit einer Einschränkung um. 
 Persönliche Dokumente werden bei mir von MacOS automatisch auf iCloud synchronisiert. Damit bleibe ich deutlich unter 50 GB und komme daher mit dem kleinsten Speicheraket aus.
 Persönliche Bilder und Videos werden manuell auf eine Online Bilder-Gallerie synchronisiert. Ich nutze hier die von mir  selbstgeschriebene ("Photos")[https://github.com/mfis/Photos] Anwendung mit dazugeörigem (Client)[https://github.com/mfis/PhotosClient].
-Alternativ wären hier auch Dienste wie Google Photos, Own-Cloud etc. möglich. Dabei sollte aber besonderes Augenmerk auf das Tehma Datensicherheit/Verschlüsselung gelegt werden.
-Beide zuletzt genannten Lösungen (iCloud, Photos) nutzen keine Versionierung. Zudem erfolgt die Photos-Synchronisation manuell.
-Als alleinige Backup-Lösung wäre TODO
+Alternativ wären hier auch Dienste wie Google Photos, Own-Cloud etc. möglich. Dabei sollte aber besonderes Augenmerk auf das Thema Datensicherheit/Verschlüsselung gelegt werden.  
+Desweiteren nutzen beide zuletzt genannten Lösungen (iCloud, Photos) keine Versionierung. Zudem erfolgt die Photos-Synchronisation nur manuell.
+Als alleinige Backup-Lösung wäre sie daher schlecht geeignet. Als ein zusätzliches, drittes Backup-Ziel auf Basis einer unabhängigen, zweiten Software, auf welches ich nur im Falle eines Datenverlustes in Kombination eines Fehlers in Arq mit beiden angebundenen Zielen zurückgreifen müsste, ist diese Lösung für mich sicher genug. 
+
+Auf wieviel Redundanz und damit zusätz im Backup legen möchte, 
