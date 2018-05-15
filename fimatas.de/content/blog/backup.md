@@ -1,7 +1,7 @@
 ---
 title: "Backup"
-date: 2018-05-01T10:27:05+02:00
-draft: true
+date: 2018-05-15T20:03:05+02:00
+draft: false
 showDate: true
 tags: ["backup"]
 ---
@@ -15,7 +15,7 @@ Dies würde bei versehentlich gelöschten Dateien helfen, nicht jedoch bei einem
 * Eine 1-zu-1 Spiegelung der zu sichernden Daten (z.B: über rsync) auf einem Backup-Meduim hilft bei einem Defekt des Gerätes, nicht aber bei versehentlich gelöschten Daten. Für geänderte/gelöschte Daten sollten daher Generations/Versions-Stände angelegt werden.
 * Es sollten idealerweise mindestens zwei Backup-Ziele (neben dem zu sichernden Gerät selbst) existieren, um die Wahrscheinlicheit zu verringern, dass das Backup-Ziel zeitgleich mit dem zu sichernden Gerät einen Defekt erleidet.
 * Ebenfalls im Idealfall sollten diese Backups auf unterschiedlichen Software-Lösungen basieren, um für den Fall eines Bugs in der Backup-Software beim Backup oder Restore vorbereitet zu sein.
-* Mindestens ein Backup sollte an einem anderen Standort als das zu sichernden Gerät aufbewahrt werden, um dem gleichzeitigen Ausfall beider Geräte z.B. bei Überschwemmung, Blitzschlag, Diebstahl entgegen zu wirken.
+* Mindestens ein Backup sollte an einem anderen Standort als das zu sichernden Gerät aufbewahrt werden, um dem gleichzeitigen Ausfall beider Geräte z.B. bei Wasserschäden, Blitzschlag, Diebstahl entgegen zu wirken.
 * Nach der Erstanlage eines Backups sowie nach Updates der Backup-Software oder des Betriebssystems des zu sichernden Gerätes sollte der Restore der gesicherten Daten getestet werden.
 
 Über diesen technischen Empfehlungen steht aber immer:  
@@ -44,11 +44,11 @@ Für den lokalen Netzwerkspeicher nutze ich eine 2 TB 3,5 Zoll USB-Festplatte an
 
 Zur Umsetzung der Empfehlungen hinsichtlich des zweiten Backup-Zieles sowie des zweiten Standorts bin ich nach einigen Wechseln bei Backblaze B2 gelandet. Der passende Anbieter hängt hier stark von der Datenmenge ab. Viele Anbieter von Cloud-Speicher bieten Festpreise in Staffelungen fester Speichergrößen an. Oftmals existieren hier zwischen 100 GB und 1-2 TB keine Zwischenstufen und meist ist das Paket mit 1-2 TB preislich schon recht happig. Wenn man dann von den 1-2 TB nur 120GB nutzt, ist das zusätzlich ärgerlich. Backblaze B2 rechnet nach der exakten Speichermenge plus dem Datentransfer ab. Das macht den monatlichen Preis zwar etwas schwieriger kalkulierbar, unterm Strich aber günstiger als viele Anbieter mit Festpreisen.
 
-Damit bin ich bei zwei Backup-Lokationen außerhalb des zu sichernden Geräts, auf die mittels Arq automatisiert versionierte Backups gespeichert werden. Was fehlt, ist der vierte Punkt der o.g. Aufzählung: Die zweite Backup-Software. Diesen Punkt setze ich nur mit einer Einschränkung um. 
-Persönliche Dokumente werden bei mir von MacOS automatisch auf iCloud synchronisiert. Damit bleibe ich deutlich unter 50 GB und komme daher mit dem kleinsten Speicheraket aus.
+Damit bin ich bei zwei Backup-Lokationen außerhalb des zu sichernden Geräts, auf die mittels Arq automatisiert versionierte Backups gespeichert werden. Was fehlt, ist der vierte Punkt der o.g. Aufzählung: Die zweite Backup-Software. Diesen Punkt setze ich bewusst mit einer Einschränkung um. 
+Persönliche Dokumente werden bei mir von MacOS automatisch auf iCloud synchronisiert. Damit bleibe ich deutlich unter 50 GB und komme daher mit dem kleinsten Speicherpaket aus.
 Persönliche Bilder und Videos werden manuell auf eine Online Bilder-Gallerie synchronisiert. Ich nutze hier die von mir  selbstgeschriebene ("Photos")[https://github.com/mfis/Photos] Anwendung mit dazugeörigem (Client)[https://github.com/mfis/PhotosClient].
 Alternativ wären hier auch Dienste wie Google Photos, Own-Cloud etc. möglich. Dabei sollte aber besonderes Augenmerk auf das Thema Datensicherheit/Verschlüsselung gelegt werden.  
 Desweiteren nutzen beide zuletzt genannten Lösungen (iCloud, Photos) keine Versionierung. Zudem erfolgt die Photos-Synchronisation nur manuell.
-Als alleinige Backup-Lösung wäre sie daher schlecht geeignet. Als ein zusätzliches, drittes Backup-Ziel auf Basis einer unabhängigen, zweiten Software, auf welches ich nur im Falle eines Datenverlustes in Kombination eines Fehlers in Arq mit beiden angebundenen Zielen zurückgreifen müsste, ist diese Lösung für mich sicher genug. 
+Als alleinige Backup-Lösung wäre sie daher schlecht geeignet. Als ein zusätzliches, drittes Backup-Ziel auf Basis einer zweiten Software, auf welches ich nur im Falle eines Datenverlustes in Kombination eines Fehlers in Arq mit beiden angebundenen Zielen zurückgreifen müsste, ist diese Lösung für mich sicher genug. 
 
-Auf wieviel Redundanz und damit zusätz im Backup legen möchte, 
+Auf wieviel Redundanz und damit zusätzliche Sicherheit im Backup man gehen möchte, muss individuell entschieden werden. Diese Übersicht soll einen Vorschlag für ein mögliches Setup zeigen.
