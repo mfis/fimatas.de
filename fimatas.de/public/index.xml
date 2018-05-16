@@ -6,10 +6,21 @@
     <description>Recent content on fimatas.de</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
-    <lastBuildDate>Sun, 29 Apr 2018 09:15:47 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 15 May 2018 20:03:05 +0200</lastBuildDate>
     
 	<atom:link href="https://fimatas.de/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Backup</title>
+      <link>https://fimatas.de/blog/backup/</link>
+      <pubDate>Tue, 15 May 2018 20:03:05 +0200</pubDate>
+      
+      <guid>https://fimatas.de/blog/backup/</guid>
+      <description>Die Lebensdauer von Speichermedien in Rechnern ist auf einem guten Stand. Dennoch ist es leider nie die Frage, ob ein Speichermedium irgendwann einen Defekt erleidet, sondern lediglich wann.
+Es gibt viele Empfehlungen zum Thema Backup der persönlichen Daten auf einem Rechner, z.B:
+ Ein Backup sollte nicht auf dem Gerät liegen, auf dem auch die zu sichernden Daten liegen. Dies würde bei versehentlich gelöschten Dateien helfen, nicht jedoch bei einem Defekt des Gerätes.</description>
+    </item>
     
     <item>
       <title>Impressum und Datenschutzerklärung</title>
@@ -17,7 +28,8 @@
       <pubDate>Sun, 29 Apr 2018 09:15:47 +0200</pubDate>
       
       <guid>https://fimatas.de/impressum/</guid>
-      <description>Impressum Angaben gemäß § 5 TMG:
+      <description>Bei fimatas.de handelt es sich um eine rein privat betriebene Webseite.
+Impressum Angaben gemäß § 5 TMG:
 Matthias Fischer
 Koxhof 3 d
 42489 Wülfrath
@@ -32,8 +44,10 @@ Haftungsausschluss (Disclaimer) Haftung für Inhalte Als Diensteanbieter sind wi
       <pubDate>Tue, 13 Feb 2018 13:42:49 -0500</pubDate>
       
       <guid>https://fimatas.de/webapps/</guid>
-      <description>FileJuggler Eine Cloud-basierte Dateiverwaltung. Unterstützt einfaches, kolaboratives Editieren von Text. Code auf GitHub
-PhotoExpo Bilder- und Video-Gallerie. Mehrbenutzer-Rechteverwaltung. Server-Code auf GitHub, Client-Code auf GitHub</description>
+      <description>Files Eine Cloud-basierte Dateiverwaltung. Unterstützt einfaches kolaboratives Editieren von Text. Ermöglicht Ende-zu-Ende Verschlüsselung.
+ Code auf GitHub  Photos Bilder- und Video-Gallerie mit Mehrbenutzer-Rechteverwaltung.
+ Server-Code auf GitHub
+ Client-Code auf GitHub  Heimautomatisierung Privater Zugang.</description>
     </item>
     
     <item>
@@ -42,9 +56,10 @@ PhotoExpo Bilder- und Video-Gallerie. Mehrbenutzer-Rechteverwaltung. Server-Code
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fimatas.de/about/</guid>
-      <description>Hello, I&amp;rsquo;m Matthias. I&amp;rsquo;m a theme for Hugo. I&amp;rsquo;m an extremely customizable, content-focused theme that lets you showcase your work your way.
-I have slick minimalist templates for list pages (such as a list of blog posts) and single pages (a page to read one blog post). You can use tags on your content, and view content by tags.
-I also have a simple responsive gallery built with CSS grid. It&amp;rsquo;ll look great on any screen, and all you have to do is provide a folder of images.</description>
+      <description>Software-Entwicklung (Java, JavaScript, HTML, CSS) &amp;#183; RaspberryPi Spielereien &amp;#183; Heimautomatisierung (HomeMatic) &amp;#183; Basteln (Elektronik, Holz)
+GitHub: mfis
+Twitter: @fimatas
+Mail: contact -at- fimatas.de</description>
     </item>
     
   </channel>

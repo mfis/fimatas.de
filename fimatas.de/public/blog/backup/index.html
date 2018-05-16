@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    
+    <meta name="description" content="Matthias Fischer">
+    
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="https://fimatas.de/">
+    <meta name="og:image" itemprop="image primaryImageOfPage" content="https://fimatas.de/tn.png">
+    
+    <title>fimatas.de</title>
+    <link rel="shortcut icon" href="https://fimatas.de/sam.ico" id="favicon">
+    <link rel="stylesheet" href="https://fimatas.de/css/style.css">
+    
+    <script src="../jquery-3.3.1.min.js"></script>
+
+</head>
+
+</html>
+<body><div class="wrap"><div class="section" id="title">Backup</div><div class="section" id="content"><p>Die Lebensdauer von Speichermedien in Rechnern ist auf einem guten Stand. Dennoch ist es leider nie die Frage, ob ein Speichermedium irgendwann einen Defekt erleidet, sondern lediglich wann.</p>
+
+<p>Es gibt viele Empfehlungen zum Thema Backup der persönlichen Daten auf einem Rechner, z.B:</p>
+
+<ul>
+<li>Ein Backup sollte nicht auf dem Gerät liegen, auf dem auch die zu sichernden Daten liegen.
+Dies würde bei versehentlich gelöschten Dateien helfen, nicht jedoch bei einem Defekt des Gerätes.</li>
+<li>Eine 1-zu-1 Spiegelung der zu sichernden Daten (z.B: über rsync) auf einem Backup-Meduim hilft bei einem Defekt des Gerätes, nicht aber bei versehentlich gelöschten Daten. Für geänderte/gelöschte Daten sollten daher Generations/Versions-Stände angelegt werden.</li>
+<li>Es sollten idealerweise mindestens zwei Backup-Ziele (neben dem zu sichernden Gerät selbst) existieren, um die Wahrscheinlicheit zu verringern, dass das Backup-Ziel zeitgleich mit dem zu sichernden Gerät einen Defekt erleidet.</li>
+<li>Ebenfalls im Idealfall sollten diese Backups auf unterschiedlichen Software-Lösungen basieren, um für den Fall eines Bugs in der Backup-Software beim Backup oder Restore vorbereitet zu sein.</li>
+<li>Mindestens ein Backup sollte an einem anderen Standort als das zu sichernden Gerät aufbewahrt werden, um dem gleichzeitigen Ausfall beider Geräte z.B. bei Wasserschäden, Blitzschlag, Diebstahl entgegen zu wirken.</li>
+<li>Nach der Erstanlage eines Backups sowie nach Updates der Backup-Software oder des Betriebssystems des zu sichernden Gerätes sollte der Restore der gesicherten Daten getestet werden.</li>
+</ul>
+
+<p>Über diesen technischen Empfehlungen steht aber immer:<br />
+Die beste Backup-Strategie nützt nichts, wenn man das Backup nicht oder zu selten durchführt.
+Regelmäßig ein Script oder Programm zu starten oder gar Kommandozeilenbefehle runter zu tippen, wird schnell lästig, man verschiebt und/oder vergisst es. So ging es zumindest mir.</p>
+
+<p>Meiner Meinung nach sollte das Backup daher automatisch laufen. Das Programm sollte nach dem Hochfahren automatisch gestartet werden, im Hintergrund laufen und in einem voreingestellten Intervall ohne Nutzerinteraktion die Backups ausführen. Meldungen an den Nutzer sollte es ausschließlich im Fehlerfall geben.
+Desweiteren war es mir wichtig, dass das Programm die Backup-Dateien vor dem Schreiben auf das Ziel verschlüsselt.</p>
+
+<p>Die Wahl des Programms ist bei mir nach einem Wechsel von CrashPlan aufgrund der Flexibilität bei den Speicher-Zielen auf Arq gefallen.<br />
+Arq unterstützt diverse Cloud-Dienste (auch gleichzeitig) und unterschiedliche Backup-Konfigurationen je Ziel.</p>
+
+<p>Ein Restore-Test für einzelne gelöschte Dateien ist vergleichsweise einfach: Test-Datei anlegen, Backup laufen lassen, Datei löschen und über Arq die Datei zurückholen.<br />
+Aufwändiger ist hier der Test eines Restores noch vollständiger Neuinstallation. Hierzu habe ich eine macOS Installation in einer VirtualBox VM aufgesetzt und darin den Restore getestet. Dies ist sicherlich aufgrund des Aufwands kein Test, den man nach den Update jeder Minor-Version von Arq durchführen möchte, zumindest aber nach großen Versionssprüngen halte ich die Prozedur für durchaus sinnvoll.</p>
+
+<p>Täglich, besser stündlich eine externe (USB-)Festplatte für das Backup anzuschließen, habe ich keine drei Tage lang durchgezogen. Wenn man dann noch der Empfehlung mit dem zweiten Standort nachgehen möchte, sind der praktischen Durchführung regelmäßigen Backups sehr schnell Grenzen gesetzt.</p>
+
+<p>Da kabelgebundene Speichermedien damit rausfallen (und auch aufgrund der Empfehlung mit dem zweiten Standort), habe ich auf eine Kombination aus Cloud- und lokalem Netzwerkspeicher gewechselt.</p>
+
+<p>Auf dem Cloudspeicher werden alle persönlichen, nicht rekonstruierbaren Dateien, wie zum Beispiel Bilder, Videos, Dokumente gesichert. Bei mir sind das aktuell etwa 120 GB.
+Auf dem lokalen Netzwerkspeicher werden zusätzlich noch rekonstruierbare Dateien gesichert, wie zum Beispiel gekaufte Musik und VM-Images. Zusammen sind das bei mir etwa 250 GB.
+Bei dem Cloudspeicher habe ich auf diese Daten aufgrund der geringen Upload-Bandbreite von 2MBit/s bei mir zu Hause verzichtet.
+Betriebssystem-Dateien sowie Apps werden gar nicht gesichert, da diese einfacher wieder neu heruntergeladen und installiert werden können.</p>
+
+<p>Für den lokalen Netzwerkspeicher nutze ich eine 2 TB 3,5 Zoll USB-Festplatte an einem Raspberry Pi. Der RaspPi läuft mit dem Standard Raspbian auf Basis von Debian Stretch. Der Zugriff vom Backup-Programm läuft über SFTP mit einem eigenen Linux-User für die Backup-Dateien. Die Festplatte ist mittels <code>hdparm</code> auf eine Spindown-Zeit von 5 Minuten konfiguriert, was sich bei stündlichen Backups, welche jeweils meist nur 1-2 Minuten laufen, als praktisch erwiesen hat. Damit dreht die Platte, solange der Rechner läuft pro Stunde nur 5 Minuten und bei ausgeschaltetem Rechner garnicht, was der Lebensdauer der Platte sowie dem Stromverbrauch zu Gute kommt.</p>
+
+<p>Zur Umsetzung der Empfehlungen hinsichtlich des zweiten Backup-Zieles sowie des zweiten Standorts bin ich nach einigen Wechseln bei Backblaze B2 gelandet. Der passende Anbieter hängt hier stark von der Datenmenge ab. Viele Anbieter von Cloud-Speicher bieten Festpreise in Staffelungen fester Speichergrößen an. Oftmals existieren hier zwischen 100 GB und 1-2 TB keine Zwischenstufen und meist ist das Paket mit 1-2 TB preislich schon recht happig. Wenn man dann von den 1-2 TB nur 120GB nutzt, ist das zusätzlich ärgerlich. Backblaze B2 rechnet nach der exakten Speichermenge plus dem Datentransfer ab. Das macht den monatlichen Preis zwar etwas schwieriger kalkulierbar, unterm Strich aber günstiger als viele Anbieter mit Festpreisen.</p>
+
+<p>Damit bin ich bei zwei Backup-Lokationen außerhalb des zu sichernden Geräts, auf die mittels Arq automatisiert versionierte Backups gespeichert werden. Was fehlt, ist der vierte Punkt der o.g. Aufzählung: Die zweite Backup-Software. Diesen Punkt setze ich bewusst mit einer Einschränkung um.
+Persönliche Dokumente werden bei mir von MacOS automatisch auf iCloud synchronisiert. Damit bleibe ich deutlich unter 50 GB und komme daher mit dem kleinsten Speicherpaket aus.
+Persönliche Bilder und Videos werden manuell auf eine Online Bilder-Gallerie synchronisiert. Ich nutze hier die von mir  selbstgeschriebene (&ldquo;Photos&rdquo;)[<a href="https://github.com/mfis/Photos">https://github.com/mfis/Photos</a>] Anwendung mit dazugeörigem (Client)[<a href="https://github.com/mfis/PhotosClient">https://github.com/mfis/PhotosClient</a>].
+Alternativ wären hier auch Dienste wie Google Photos, Own-Cloud etc. möglich. Dabei sollte aber besonderes Augenmerk auf das Thema Datensicherheit/Verschlüsselung gelegt werden.<br />
+Desweiteren nutzen beide zuletzt genannten Lösungen (iCloud, Photos) keine Versionierung. Zudem erfolgt die Photos-Synchronisation nur manuell.
+Als alleinige Backup-Lösung wäre sie daher schlecht geeignet. Als ein zusätzliches, drittes Backup-Ziel auf Basis einer zweiten Software, auf welches ich nur im Falle eines Datenverlustes in Kombination eines Fehlers in Arq mit beiden angebundenen Zielen zurückgreifen müsste, ist diese Lösung für mich sicher genug.</p>
+
+<p>Auf wieviel Redundanz und damit zusätzliche Sicherheit im Backup man gehen möchte, muss individuell entschieden werden. Diese Übersicht soll einen Vorschlag für ein mögliches Setup zeigen.</p>
+</div><div class="section bottom-menu"><hr/><p><a href="https://fimatas.de/">Navigation</a>&nbsp;&#183; 
+<a href="/about">Matthias Fischer</a>
+
+&#183; <a href="/blog">Blog</a>
+&#183; <a href="/webapps">Web-Apps</a></p></div><div class="section bottom-menu-small"><p><a href="/impressum">Impressum &amp; Datenschutzerklärung</a>
+
+&#183; <a href="/licenseattribution">License-Attribution</a> </p></div><div class="section footer"></div></div></body>

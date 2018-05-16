@@ -1,7 +1,7 @@
 ---
 title: "License-Attribution"
 date: 2018-05-01T11:17:33+02:00
-draft: true
+draft: false
 ---
 
 This project contains an edited Hugo theme, that is based on the **"Call me Sam"** Theme by **Vicky Lai**. 
