@@ -9,7 +9,7 @@ Eine Cloud-basierte Dateiverwaltung. Unterstützt einfaches kolaboratives Editie
 * [Code auf GitHub](https://github.com/mfis/Files/)
 
 ## [Photos](https://fimatas.de/Photos/)
-Bilder- und Video-Gallerie mit Mehrbenutzer-Rechteverwaltung.
+Bilder- und Video-Galerie mit Mehrbenutzer-Rechteverwaltung.
 
 * [Server-Code auf GitHub](https://github.com/mfis/Photos)  
 * [Client-Code auf GitHub](https://github.com/mfis/PhotosClient)
