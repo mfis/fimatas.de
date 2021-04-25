@@ -50,6 +50,12 @@
                             <p><span>iOS und watchOS Frontend für Home Web-Applikation (s.u.)</span></p>
 							<p><span><i class="fab fa-swift"></i></span><span> Swift</span></p>
 							<p><a target="_blank" href="https://github.com/mfis/homeClient"><i class="fab fa-github"></i> Code </a><a>&nbsp;</a></p>
+                            <div class="homeAppGallery">
+                                Screenshots:
+                                <a href="/img/homeclient/homeclientIPhone.png"><i class="fas fa-mobile-alt"></i> iPhone</a>
+                                 |
+                                <a href="/img/homeclient/homeclientAppleWatch.jpeg"><i class="far fa-clock">Apple Watch</i></a>
+                            </div>
                         </div>
                         <div class="flex-shrink-0"><span>Seit 2020</span></div>
                     </div>
@@ -113,13 +119,25 @@
                         <li>
                             <span class="fa-li"><i class="far fa-dot-circle text-warning"></i></span>
                             Icons:<br/>
-                            Font Awesome by Dave Gandy (https://fontawesome.com)
-                        </li>                                                
+                            Font Awesome (https://fontawesome.com)
+                            Licensed under Font Awesome Free License (https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="far fa-dot-circle text-warning"></i></span>
+                            Lightbox image view:<br/>
+                            SimpleLightbox by Andre Rinas (https://www.andrerinas.de)
+                            Licensed under MIT (https://github.com/andreknieriem/simplelightbox/blob/master/LICENSE)
+                        </li>
                     </ul>
                 </div>
             </section>
         </div>
-        
+
         <div th:replace="common :: foot()"></div>
+
+        <script>
+            let homeAppGallery = new SimpleLightbox('.homeAppGallery a');
+        </script>
+
     </body>
 </html>

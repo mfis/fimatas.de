@@ -26,6 +26,7 @@
 		<jquery-easing.version>1.4.1</jquery-easing.version>
 		<webjars-locator.version>0.40</webjars-locator.version>
 		<startbootstrap-resume.version>6.0.1a</startbootstrap-resume.version>
+		<simplelightbox.version>2.7.3</simplelightbox.version>
 		<!-- Plugin versions -->
 		<dependency-check-maven.version>6.1.5</dependency-check-maven.version>
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
@@ -76,7 +77,12 @@
 			<groupId>web</groupId>
 			<artifactId>startbootstrap-resume</artifactId>
 			<version>${startbootstrap-resume.version}</version>
-		</dependency>			
+		</dependency>
+		<dependency>
+			<groupId>web</groupId>
+			<artifactId>simplelightbox</artifactId>
+			<version>${simplelightbox.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
