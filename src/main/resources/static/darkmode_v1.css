@@ -13,4 +13,9 @@
             border: 0.5rem solid rgba(151, 75, 45, 0.8) !important;
         }
     }
+
+    .sl-overlay {
+        background: #222 !important;
+        opacity: 0.8 !important;
+    }
 }
