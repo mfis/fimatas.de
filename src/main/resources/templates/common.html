@@ -33,10 +33,32 @@
         <script src="/startbootstrap-resume/scripts.js"></script>
         <script src="/simplelightbox/simple-lightbox.min.js"></script>
         <script>
-	        function m(){
-		        return 'm'+String.fromCharCode(parseInt('61', 16))+'il'+String.fromCharCode(parseInt('40', 16))+'fim'+String.fromCharCode(parseInt('61', 16))+'t'+String.fromCharCode(parseInt('61', 16))+'s'+String.fromCharCode(parseInt('2E', 16))+'de';
-		    }	        
-            document.getElementById('ml').href='m'+String.fromCharCode(parseInt('61', 16))+'ilto'+String.fromCharCode(parseInt('3A', 16))+m();
+	        function m(asLink){
+	            let mt = "6D,61,69,6C,74,6F,3A";
+	            let chars = "6D,61,69,6C,40,66,69,6D,61,74,61,73,2E,64,65";
+	            var result = '';
+	            if(asLink){
+                    mt.split(',').forEach(function(c){
+                        result += String.fromCharCode(parseInt(c, 16));
+                    });
+                }
+	            chars.split(',').forEach(function(c){
+                    result += String.fromCharCode(parseInt(c, 16));
+                    if(!asLink){
+                        result += "<!-- x -->";
+                    }
+                });
+		        return result;
+		    }
+
+            for (let e of document.getElementsByClassName("contact-with-link")) {
+                e.href = "javascript:window.location.href=atob('" + btoa(m(true)) + "');"
+            }
+
+            for (let e of document.getElementsByClassName("contact-direct")) {
+                e.innerHTML = m(false);
+            }
+
         </script>
     </th:block>
 
