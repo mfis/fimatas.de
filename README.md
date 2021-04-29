@@ -1,14 +1,31 @@
 # fimatas.de
   
-This repository contains the [Hugo](https://gohugo.io) Project files as well as the generated Source code of the website https://fimatas.de.  
+This repository contains the Project files of the website https://fimatas.de.  
   
 ---
 
-This project contains an edited Hugo theme, that is based on the "Call me Sam" Theme by Vicky Lai.  
-Original published under Creative Commons Attribution 3.0 Unported license. https://github.com/hivickylai/hugo-theme-sam/blob/master/LICENSE.txt  
-Original Sourcecode under: https://github.com/hivickylai/hugo-theme-sam  
-  
+This project uses:
+
+[Bootstrap v4.5.0](https://getbootstrap.com/)
+
+Copyright 2011-now - Twitter, Inc.
+
+[Licensed under MIT](https://​github.com/twbs/bootstrap/​blob/master/LICENSE)
+
 ---
-  
-This project uses jQuery by jQuery Foundation.
-Published under MIT license. https://jquery.org/license/
+
+This project uses:
+
+[Start Bootstrap - Resume v6.0.1](https://​startbootstrap.com/​template-overviews/resume)
+
+Copyright 2013-now - Start Bootstrap
+
+[Licensed under MIT](https://​github.com/StartBootstrap/​startbootstrap-resume/​blob/master/LICENSE)
+
+---
+
+This project uses:
+
+[Font Awesome Free](http://fontawesome.com)
+
+[Licensed under MIT, SIL OFL, and CC BY licenses](https://fontawesome.com/license/free)

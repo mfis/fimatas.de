@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+
+	<head th:replace="common :: head()"><title></title></head>
+
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Matthias Fischer</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/img/profile.jpg" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Über</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#programming">Programmierung</a></li>
+                    <li><a>&nbsp;</a></li>
+                    <li><a class="nav-link js-scroll-trigger" href="#impressum">Impressum &amp; Datenschutzerklärung</a></li>
+                    <li><a class="nav-link js-scroll-trigger" href="#license">Lizenzzuweisung</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Matthias
+                        <span class="text-primary">Fischer</span>
+                    </h1>
+                    <div class="subheading mb-5"></div>
+                    <div class="subheading mb-5">
+                        <ul class="fa-ul mb-0">
+                            <li>
+                                <span class="fa-li"><i class="far fa-dot-circle text-primary"></i></span>
+                                Software-Entwickler
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="far fa-dot-circle text-primary"></i></span>
+                                Schwerpunkt Java &shy;Web-Technologien
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="social-icons">
+                        <a target="_blank" class="social-icon contact-with-link" href="#"><i class="fas fa-envelope"></i></a>
+                        <a class="social-icon" target="_blank" href="https://twitter.com/fimatas"><i class="fab fa-twitter"></i></a>
+                        <a class="social-icon" target="_blank" href="https://github.com/mfis"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" target="_blank" href="https://www.xing.com/profile/Matthias_Fischer79/cv"><i class="fab fa-xing"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="programming">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Program&shy;mierung</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">HomeClient</h3>
+                            <p><span>iOS und watchOS Frontend für Home Web-Applikation (s.u.)</span></p>
+							<p><span><i class="fab fa-swift"></i></span><span> Swift</span></p>
+							<p><a target="_blank" href="https://github.com/mfis/homeClient"><i class="fab fa-github"></i> Code </a><a>&nbsp;</a></p>
+                            <div class="homeAppGallery">
+                                Screenshots:
+                                <a href="/img/homeclient/homeclientIPhone.png"><i class="fas fa-mobile-alt"></i> iPhone</a>
+                                 |
+                                <a href="/img/homeclient/homeclientAppleWatch.jpeg"><i class="far fa-clock">Apple Watch</i></a>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0"><span>Seit 2020</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Home</h3>
+                            <p><span>Frontend für eine Heimautomatisierungs-Lösung auf Basis von <a target="_blank" href="https://www.eq-3.de/produkte/homematic.html"><i class="fas fa-external-link-alt"></i>&nbsp;Homematic</a></span></p>
+							<p><span><i class="fab fa-java"></i></span><span> Java | </span><span><i class="fab fa-bootstrap"></i></span><span> Bootstrap | </span><span><i class="fab fa-js-square"></i></span><span> JavaScript</span></p>
+							<p><a target="_blank" href="https://github.com/mfis/home"><i class="fab fa-github"></i> Code </a><a>&nbsp;</a><a target="_blank" href="https://home.fimatas.de"><i class="fas fa-link"></i> Link </a></p>
+                        </div>
+                        <div class="flex-shrink-0"><span>Seit 2018</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Photos</h3>
+                            <p><span>Bilder- und Video-Galerie mit Mehrbenutzer-Rechteverwaltung</span></p>
+							<p><span><i class="fab fa-java"></i></span><span> Java | </span><span><i class="fab fa-html5"></i></span><span> HTML5 | </span><span><i class="fab fa-js-square"></i></span><span> JavaScript</span></p>
+							<p><a target="_blank" href="https://github.com/mfis/photos"><i class="fab fa-github"></i> Code </a><a>&nbsp;</a><a target="_blank" href="https://photos.fimatas.de"><i class="fas fa-link"></i> Link </a></p>
+                        </div>
+                        <div class="flex-shrink-0"><span>Seit 2015</span></div>
+                    </div>                                        
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Files</h3>
+                            <p><span>Eine Cloud-basierte Dateiverwaltung. Unterstützt einfaches kolaboratives Editieren von Text. Ermöglicht Ende-zu-Ende Verschlüsselung</span></p>
+                            <p><span><i class="fab fa-java"></i></span><span> Java | </span><span><i class="far fa-file-code"></i></span><span> HTML | </span><span><i class="fab fa-js-square"></i></span><span> JavaScript</span></p>
+                            <p><a target="_blank" href="https://github.com/mfis/files"><i class="fab fa-github"></i> Code </a><a>&nbsp;</a><a target="_blank" href="https://files.fimatas.de"><i class="fas fa-link"></i> Link </a></p>
+                        </div>
+                        <div class="flex-shrink-0"><span>Seit 2010</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- impressum-->
+            <section class="resume-section" id="impressum">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Impressum &amp; Daten&shy;schutz&shy;erklärung</h2>
+                    <p>Zum Aufruf des Impressums sowie der Datenschutzerklärung bitte <a href="/impressum/"><i class="fas fa-link"></i>&nbsp;hier</a> klicken.</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Awards-->
+            <section class="resume-section" id="license">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Lizenz&shy;zuweisung</h2>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="far fa-dot-circle text-primary"></i></span>
+                            Frontend-Framework:<br/>
+                            <a href="https://getbootstrap.com/" target="_blank">Bootstrap v4.5.0</a><br/>
+                            Copyright 2011-now - Twitter, Inc.<br/>
+                            <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">Licensed under MIT</a><br/><br/>
+                        </li>  	                    
+                        <li>
+                            <span class="fa-li"><i class="far fa-dot-circle text-primary"></i></span>
+                            Thema:<br/>
+                            <a href="https://startbootstrap.com/theme/resume" target="_blank">Start Bootstrap - Resume v6.0.1</a><br/>
+							Copyright 2013-now - Start Bootstrap<br/>
+                            <a href="https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE" target="_blank">Licensed under MIT</a><br/><br/>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="far fa-dot-circle text-primary"></i></span>
+                            Icons:<br/>
+                            <a href="https://fontawesome.com" target="_blank">Font Awesome</a><br/>
+                            <a href="https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt" target="_blank">Licensed under CC BY 4.0 License</a><br/><br/>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="far fa-dot-circle text-primary"></i></span>
+                            Lightbox image view:<br/>
+                            <a href="https://www.andrerinas.de" target="_blank">SimpleLightbox by Andre Rinas</a><br/>
+                            Copyright 2020 - Andre Rinas
+                            <a href="https://github.com/andreknieriem/simplelightbox/blob/master/LICENSE" target="_blank">Licensed under MIT</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div th:replace="common :: foot()"></div>
+
+        <script>
+            let homeAppGallery = new SimpleLightbox('.homeAppGallery a');
+        </script>
+
+    </body>
+</html>

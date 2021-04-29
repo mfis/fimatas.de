@@ -1,0 +1,127 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.10.RELEASE</version>
+		<relativePath />
+	</parent>
+
+	<properties>
+		<!-- Encoding -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- Java -->
+		<java.version>11</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<!-- Dependency versions -->
+		<spring-boot.version>2.3.10.RELEASE</spring-boot.version>
+		<!-- Webjars versions -->
+		<bootstrap.version>4.5.0</bootstrap.version>
+		<jquery.version>3.5.1</jquery.version>
+		<font-awesome.version>5.14.0</font-awesome.version>
+		<jquery-easing.version>1.4.1</jquery-easing.version>
+		<webjars-locator.version>0.40</webjars-locator.version>
+		<startbootstrap-resume.version>6.0.1a</startbootstrap-resume.version>
+		<simplelightbox.version>2.7.3</simplelightbox.version>
+		<!-- Plugin versions -->
+		<dependency-check-maven.version>6.1.5</dependency-check-maven.version>
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+	</properties>
+
+	<groupId>de.fimatas</groupId>
+	<artifactId>fimatas.de</artifactId>
+	<version>DEV</version>
+	<name>fimatas.de</name>
+	<url>https://fimatas.de</url>
+	<packaging>jar</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>${bootstrap.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>jquery</artifactId>
+			<version>${jquery.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>font-awesome</artifactId>
+			<version>${font-awesome.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.webjars</groupId>
+		    <artifactId>jquery-easing</artifactId>
+			<version>${jquery-easing.version}</version>
+		</dependency>		
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>webjars-locator</artifactId>
+			<version>${webjars-locator.version}</version>
+		</dependency>	
+		<dependency>
+			<groupId>web</groupId>
+			<artifactId>startbootstrap-resume</artifactId>
+			<version>${startbootstrap-resume.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>web</groupId>
+			<artifactId>simplelightbox</artifactId>
+			<version>${simplelightbox.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.owasp</groupId>
+					<artifactId>dependency-check-maven</artifactId>
+					<version>${dependency-check-maven.version}</version>
+					<configuration>
+						<failBuildOnCVSS>0</failBuildOnCVSS>
+						<suppressionFile>owasp-suppressions.xml</suppressionFile>
+					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>check</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${spring-boot.version}</version>
+				<configuration>
+					<executable>true</executable>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.owasp</groupId>
+				<artifactId>dependency-check-maven</artifactId>
+				<version>${dependency-check-maven.version}</version>
+			</plugin>
+		</plugins>
+		<finalName>FimatasDe</finalName>
+	</build>
+
+</project>

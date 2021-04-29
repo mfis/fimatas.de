@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="de">
+
+    <head th:fragment="head()">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Matthias Fischer" />
+        <meta name="author" content="" />
+        <title>Matthias Fischer</title>
+        <link rel="stylesheet" href="/webjars/font-awesome/css/all.min.css" crossorigin="anonymous"/>
+        <link href="/startbootstrap-resume/styles.css" rel="stylesheet" />
+        <link href="/darkmode_v1.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/simplelightbox/simple-lightbox.min.css" crossorigin="anonymous"/>
+        <style>
+	        .mb-0, h1, .h1{
+		    	font-stretch: ultra-condensed !important;    
+		    }
+		    @media screen and (max-width: 600px) {
+			    h1, .h1{
+			    	font-size:16vw !important;
+			    }
+			    h2, .h2{
+			    	font-size:12vw !important;
+			    }			    
+		    }
+	    </style>
+    </head>
+    
+    <th:block th:fragment="foot()">
+        <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/webjars/jquery-easing/jquery.easing.min.js"></script>
+        <script src="/startbootstrap-resume/scripts.js"></script>
+        <script src="/simplelightbox/simple-lightbox.min.js"></script>
+        <script>
+	        function m(asLink){
+	            let mt = "6D,61,69,6C,74,6F,3A";
+	            let chars = "6D,61,69,6C,40,66,69,6D,61,74,61,73,2E,64,65";
+	            var result = '';
+	            if(asLink){
+                    mt.split(',').forEach(function(c){
+                        result += String.fromCharCode(parseInt(c, 16));
+                    });
+                }
+	            chars.split(',').forEach(function(c){
+                    result += String.fromCharCode(parseInt(c, 16));
+                    if(!asLink){
+                        result += "<!-- x -->";
+                    }
+                });
+		        return result;
+		    }
+
+            for (let e of document.getElementsByClassName("contact-with-link")) {
+                e.href = "javascript:window.location.href=atob('" + btoa(m(true)) + "');"
+            }
+
+            for (let e of document.getElementsByClassName("contact-direct")) {
+                e.innerHTML = m(false);
+            }
+
+        </script>
+    </th:block>
+
+</html>

@@ -1,0 +1,21 @@
+@media (prefers-color-scheme: dark) {
+
+    section.resume-section {
+        background-color: #181411 !important;
+    }
+
+    .mb-0, .mb-5, h1, h2, h3, h4, p {
+        color: #d3d3d3 !important;
+    }
+
+    @media (min-width: 992px) {
+        #sideNav .navbar-brand .img-profile {
+            border: 0.5rem solid rgba(151, 75, 45, 0.8) !important;
+        }
+    }
+
+    .sl-overlay {
+        background: #222 !important;
+        opacity: 0.8 !important;
+    }
+}
