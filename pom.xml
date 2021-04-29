@@ -94,7 +94,8 @@
 					<version>${dependency-check-maven.version}</version>
 					<configuration>
 						<failBuildOnCVSS>0</failBuildOnCVSS>
-						<suppressionFile>owasp-suppressions.xml</suppressionFile>
+						<!-- TODO: failed to resolve relative file path -->
+						<suppressionFile>/Users/mfi/Code/IntelliJ/fimatas.de/owasp-suppressions.xml</suppressionFile>
 					</configuration>
 					<executions>
 						<execution>
