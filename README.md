@@ -29,3 +29,11 @@ This project uses:
 [Font Awesome Free](http://fontawesome.com)
 
 [Licensed under MIT, SIL OFL, and CC BY licenses](https://fontawesome.com/license/free)
+
+---
+
+This project uses:
+
+[SimpleLightbox by Andre Rinas](https://www.andrerinas.de)
+
+[Licensed under MIT](https://github.com/andreknieriem/simplelightbox/blob/master/LICENSE)
