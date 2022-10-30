@@ -84,27 +84,6 @@
 	</dependencies>
 
 	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.owasp</groupId>
-					<artifactId>dependency-check-maven</artifactId>
-					<version>${dependency-check-maven.version}</version>
-					<configuration>
-						<failBuildOnCVSS>0</failBuildOnCVSS>
-						<!-- TODO: failed to resolve relative file path -->
-						<suppressionFile>/Users/mfi/Code/IntelliJ/fimatas.de/owasp-suppressions.xml</suppressionFile>
-					</configuration>
-					<executions>
-						<execution>
-							<goals>
-								<goal>check</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-			</plugins>
-		</pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -121,11 +100,6 @@
 				<configuration>
 					<executable>true</executable>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.owasp</groupId>
-				<artifactId>dependency-check-maven</artifactId>
-				<version>${dependency-check-maven.version}</version>
 			</plugin>
 		</plugins>
 		<finalName>FimatasDe</finalName>
