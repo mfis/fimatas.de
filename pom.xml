@@ -16,10 +16,10 @@
 		<!-- Java -->
 		<java.version>11</java.version>
 		<!-- Dependency versions -->
-		<spring-boot.version>2.6.12</spring-boot.version>
+		<spring-boot.version>2.6.14</spring-boot.version>
 		<!-- Webjars versions -->
-		<bootstrap.version>4.5.0</bootstrap.version>
-		<jquery.version>3.5.1</jquery.version>
+		<bootstrap.version>5.2.3</bootstrap.version>
+		<jquery.version>3.6.1</jquery.version>
 		<font-awesome.version>5.14.0</font-awesome.version>
 		<jquery-easing.version>1.4.1</jquery-easing.version>
 		<webjars-locator.version>0.40</webjars-locator.version>
