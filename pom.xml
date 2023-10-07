@@ -27,7 +27,7 @@
 		<simplelightbox.version>2.7.3</simplelightbox.version>
 		<!-- Plugin versions -->
 		<dependency-check-maven.version>7.0.4</dependency-check-maven.version>
-		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+		<maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
 	</properties>
 
 	<groupId>de.fimatas</groupId>
