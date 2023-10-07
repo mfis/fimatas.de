@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.10</version>
+		<version>3.1.4</version>
 		<relativePath />
 	</parent>
 
@@ -14,16 +14,16 @@
 		<!-- Encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- Java -->
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 		<!-- Dependency versions -->
-		<spring-boot.version>2.7.10</spring-boot.version>
+		<spring-boot.version>3.1.4</spring-boot.version>
 		<!-- Webjars versions -->
 		<bootstrap.version>5.2.3</bootstrap.version>
 		<jquery.version>3.6.4</jquery.version>
-		<font-awesome.version>5.14.0</font-awesome.version>
+		<font-awesome.version>6.4.2</font-awesome.version>
 		<jquery-easing.version>1.4.1</jquery-easing.version>
 		<webjars-locator.version>0.40</webjars-locator.version>
-		<startbootstrap-resume.version>6.0.1a</startbootstrap-resume.version>
+		<startbootstrap-resume.version>6.0.1b</startbootstrap-resume.version>
 		<simplelightbox.version>2.7.3</simplelightbox.version>
 		<!-- Plugin versions -->
 		<dependency-check-maven.version>7.0.4</dependency-check-maven.version>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="de" xmlns:th="http://www.thymeleaf.org">
 
-	<head th:replace="common :: head()"><title></title></head>
+	<head th:replace="~{common :: head()}"><title></title></head>
 
-    <body id="page-top">
+    <body id="page-top" style="background-color:#181411 !important;">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -45,7 +45,7 @@
                     </div>
                     <div class="social-icons">
                         <a target="_blank" class="social-icon contact-with-link" href="#"><i class="fas fa-envelope"></i></a>
-                        <a class="social-icon" target="_blank" href="https://twitter.com/fimatas"><i class="fab fa-twitter"></i></a>
+                        <a class="social-icon" target="_blank" href="https://troet.cafe/@fimatas"><i class="fa-brands fa-mastodon"></i></a>
                         <a class="social-icon" target="_blank" href="https://github.com/mfis"><i class="fab fa-github"></i></a>
                         <a class="social-icon" target="_blank" href="https://www.xing.com/profile/Matthias_Fischer79/cv"><i class="fab fa-xing"></i></a>
                     </div>
@@ -65,39 +65,19 @@
 							<p><a target="_blank" href="https://github.com/mfis/homeClient"><i class="fab fa-github"></i> Code </a><a>&nbsp;</a></p>
                             <div class="homeAppGallery">
                                 Screenshots:
-                                <a href="/img/homeclient/homeclientIPhone.png"><i class="fas fa-mobile-alt"></i> iPhone</a>
+                                <a href="/img/homeclient/homeclientIPhone.png"><i class="fas fa-mobile-alt"></i> iPhone </a>
                                  |
-                                <a href="/img/homeclient/homeclientAppleWatch.jpeg"><i class="far fa-clock">Apple Watch</i></a>
+                                <a href="/img/homeclient/homeclientAppleWatch.jpeg"> <i class="far fa-clock"></i> Apple Watch</a>
                             </div>
                         </div>
-                        <div class="flex-shrink-0"><span>Seit 2020</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Home</h3>
-                            <p><span>Frontend für eine Heimautomatisierungs-Lösung auf Basis von <a target="_blank" href="https://www.eq-3.de/produkte/homematic.html"><i class="fas fa-external-link-alt"></i>&nbsp;Homematic</a></span></p>
+                            <p><span>Heimautomatisierungs-Lösung auf Basis von <a target="_blank" href="https://www.eq-3.de/produkte/homematic.html"><i class="fas fa-external-link-alt"></i>&nbsp;Homematic</a></span></p>
 							<p><span><i class="fab fa-java"></i></span><span> Java | </span><span><i class="fab fa-bootstrap"></i></span><span> Bootstrap | </span><span><i class="fab fa-js-square"></i></span><span> JavaScript</span></p>
 							<p><a target="_blank" href="https://github.com/mfis/home"><i class="fab fa-github"></i> Code </a><a>&nbsp;</a><a target="_blank" href="https://home.fimatas.de"><i class="fas fa-link"></i> Link </a></p>
                         </div>
-                        <div class="flex-shrink-0"><span>Seit 2018</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Photos</h3>
-                            <p><span>Bilder- und Video-Galerie mit Mehrbenutzer-Rechteverwaltung</span></p>
-							<p><span><i class="fab fa-java"></i></span><span> Java | </span><span><i class="fab fa-html5"></i></span><span> HTML5 | </span><span><i class="fab fa-js-square"></i></span><span> JavaScript</span></p>
-							<p><a target="_blank" href="https://github.com/mfis/photos"><i class="fab fa-github"></i> Code </a><a>&nbsp;</a><a target="_blank" href="https://photos.fimatas.de"><i class="fas fa-link"></i> Link </a></p>
-                        </div>
-                        <div class="flex-shrink-0"><span>Seit 2015</span></div>
-                    </div>                                        
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Files</h3>
-                            <p><span>Eine Cloud-basierte Dateiverwaltung. Unterstützt einfaches kolaboratives Editieren von Text. Ermöglicht Ende-zu-Ende Verschlüsselung</span></p>
-                            <p><span><i class="fab fa-java"></i></span><span> Java | </span><span><i class="far fa-file-code"></i></span><span> HTML | </span><span><i class="fab fa-js-square"></i></span><span> JavaScript</span></p>
-                            <p><a target="_blank" href="https://github.com/mfis/files"><i class="fab fa-github"></i> Code </a><a>&nbsp;</a><a target="_blank" href="https://files.fimatas.de"><i class="fas fa-link"></i> Link </a></p>
-                        </div>
-                        <div class="flex-shrink-0"><span>Seit 2010</span></div>
                     </div>
                 </div>
             </section>
@@ -152,7 +132,7 @@
             </section>
         </div>
 
-        <div th:replace="common :: foot()"></div>
+        <div th:replace="~{common :: foot()}"></div>
 
         <script>
             let homeAppGallery = new SimpleLightbox('.homeAppGallery a');
