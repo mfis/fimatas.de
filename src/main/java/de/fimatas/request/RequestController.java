@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Arrays;
+
 @Controller
 public class RequestController {
 
@@ -14,6 +16,11 @@ public class RequestController {
 
     @RequestMapping("/impressum")
     public String impressum(Model model) {
+        return "impressum";
+    }
+
+    @RequestMapping("/impressum/")
+    public String impressum2(Model model) {
         return "impressum";
     }
 }
