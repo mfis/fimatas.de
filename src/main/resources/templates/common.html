@@ -4,7 +4,8 @@
     <head th:fragment="head()">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Matthias Fischer" />
-        <meta name="author" content="" />
+        <meta name="author" content="Matthias Fischer" />
+        <meta charset="UTF-8">
         <title>Matthias Fischer</title>
         <link rel="stylesheet" href="/webjars/font-awesome/css/all.min.css?v6.4.2" crossorigin="anonymous"/>
         <link href="/startbootstrap-resume/styles.css" rel="stylesheet" />
@@ -31,34 +32,6 @@
         <script src="/webjars/jquery-easing/jquery.easing.min.js"></script>
         <script src="/startbootstrap-resume/scripts.js?6.0.1b"></script>
         <script src="/simplelightbox/simple-lightbox.min.js"></script>
-        <script>
-	        function m(asLink){
-	            let mt = "6D,61,69,6C,74,6F,3A";
-	            let chars = "6D,61,69,6C,40,66,69,6D,61,74,61,73,2E,64,65";
-	            var result = '';
-	            if(asLink){
-                    mt.split(',').forEach(function(c){
-                        result += String.fromCharCode(parseInt(c, 16));
-                    });
-                }
-	            chars.split(',').forEach(function(c){
-                    result += String.fromCharCode(parseInt(c, 16));
-                    if(!asLink){
-                        result += "<!-- x -->";
-                    }
-                });
-		        return result;
-		    }
-
-            for (let e of document.getElementsByClassName("contact-with-link")) {
-                e.href = "javascript:window.location.href=atob('" + btoa(m(true)) + "');"
-            }
-
-            for (let e of document.getElementsByClassName("contact-direct")) {
-                e.innerHTML = m(false);
-            }
-
-        </script>
     </th:block>
 
 </html>

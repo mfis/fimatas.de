@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de" xmlns:th="http://www.thymeleaf.org">
 
-	<head th:replace="common :: head()"><title></title></head>
+    <head th:replace="~{common :: head()}"><title></title></head>
 
     <body>
         <!-- Navigation-->
@@ -9,7 +9,7 @@
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">Matthias Fischer</span>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#impressum">Impressum</a></li>
@@ -38,7 +38,7 @@
 						42489 Wülfrath
 						<br/>
 		
-						E-Mail: <a>webseite.maestro-0x<!-- ... -->@icloud.com</a>
+						<a th:utext="${email}"></a>
 					</p>
 		
 					<p>
@@ -79,7 +79,7 @@
                 42489 Wülfrath
                 <br/>
 
-                E-Mail: <a>webseite.maestro-0x<!-- ... -->@icloud.com</a>
+                <a th:utext="${email}"></a>
             </p>
 
             <h3 id="erfassung-allgemeiner-informationen">Erfassung allgemeiner Informationen</h3>
@@ -139,7 +139,7 @@
                 42489 Wülfrath
                 <br/>
 
-                E-Mail: <a>webseite.maestro-0x<!-- ... -->@icloud.com</a>
+                <a th:utext="${email}"></a>
             </p>
 
             <p>
@@ -151,6 +151,6 @@
             </section>            
         </div>
 
-		<div th:replace="common :: foot()"></div>
+        <div th:replace="~{common :: foot()}"></div>
     </body>
 </html>

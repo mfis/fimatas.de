@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.7</version>
+		<version>3.4.3</version>
 		<relativePath />
 	</parent>
 
@@ -16,7 +16,7 @@
 		<!-- Java -->
 		<java.version>17</java.version>
 		<!-- Dependency versions -->
-		<spring-boot.version>3.3.3</spring-boot.version>
+		<spring-boot.version>3.4.3</spring-boot.version>
 		<!-- Webjars versions -->
 		<bootstrap.version>5.2.3</bootstrap.version>
 		<jquery.version>3.6.4</jquery.version>
@@ -26,7 +26,6 @@
 		<startbootstrap-resume.version>6.0.1b</startbootstrap-resume.version>
 		<simplelightbox.version>2.7.3</simplelightbox.version>
 		<!-- Plugin versions -->
-		<dependency-check-maven.version>7.0.4</dependency-check-maven.version>
 		<maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
 	</properties>
 
