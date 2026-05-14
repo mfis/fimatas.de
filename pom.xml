@@ -15,8 +15,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- Java -->
 		<java.version>17</java.version>
-		<!-- Dependency versions -->
-		<spring-boot.version>4.0.6</spring-boot.version>
 		<!-- Webjars versions -->
 		<bootstrap.version>5.2.3</bootstrap.version>
 		<jquery.version>3.6.4</jquery.version>
@@ -24,9 +22,8 @@
 		<jquery-easing.version>1.4.1</jquery-easing.version>
 		<startbootstrap-resume.version>6.0.1b</startbootstrap-resume.version>
 		<simplelightbox.version>2.7.3</simplelightbox.version>
-		<lombok.version>1.18.46</lombok.version>
 		<!-- Plugin versions -->
-		<maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+		<maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
 	</properties>
 
 	<groupId>de.fimatas</groupId>
@@ -97,12 +94,18 @@
 					<release>${java.version}</release>
 					<showDeprecation>true</showDeprecation>
 					<showWarnings>true</showWarnings>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+							<version>${lombok.version}</version>
+						</path>
+					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>${spring-boot.version}</version>
 			</plugin>
 		</plugins>
 		<finalName>FimatasDe</finalName>
