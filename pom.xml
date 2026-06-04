@@ -14,7 +14,7 @@
 		<!-- Encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- Java -->
-		<java.version>17</java.version>
+		<java.version>25</java.version>
 		<!-- Webjars versions -->
 		<bootstrap.version>5.2.3</bootstrap.version>
 		<jquery.version>3.6.4</jquery.version>
